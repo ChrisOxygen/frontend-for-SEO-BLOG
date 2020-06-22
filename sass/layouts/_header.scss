@@ -1,0 +1,16 @@
+.header {
+    height: 16rem;
+    width: 100vw;
+    background-color: $eerie-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: $container-width;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+}

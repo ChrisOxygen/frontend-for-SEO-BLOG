@@ -1,0 +1,91 @@
+/*
+0 - 600px = phone
+600px - 900px = tablet portrait
+900px - 1200px = tablet landscape
+[1200 - 1799 is the main design size ]
+1800px + = big screens
+*/
+/*
+break points
+-------------------
+phone
+tab-port
+tab-land
+big-screen
+
+*/
+/* SCSS HEX */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: inherit; }
+
+html {
+  /*its was 10px so we did 10/16 * 100 to get the percentage(16 is the default font size for browsers*/
+  font-size: 62.5%; }
+
+::selection {
+  background-color: #333533ff;
+  color: #fff; }
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem; }
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif; }
+
+.logo {
+  width: 17rem; }
+
+.menu__list {
+  list-style: none; }
+
+.menu__item {
+  display: inline-block; }
+  .menu__item:not(:last-child) {
+    margin-right: 2rem; }
+
+.menu__link {
+  text-decoration: none;
+  color: #f5cb5cff;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: .2rem;
+  transition: all 0.3s; }
+  .menu__link:hover {
+    color: #fff; }
+
+.main-post {
+  grid-column: 1 / 1; }
+
+.header {
+  height: 16rem;
+  width: 100vw;
+  background-color: #242423ff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .header__container {
+    width: 110rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+
+.hero-section {
+  width: 100vw;
+  height: 55rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8eddfff; }
+  .hero-section__container {
+    width: 110rem;
+    display: grid;
+    grid-template-columns: 78rem 1fr; }
