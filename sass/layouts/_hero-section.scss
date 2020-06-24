@@ -1,6 +1,6 @@
 .hero-section {
     width: 100vw;
-    height: 55rem;
+    height: 65rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +10,8 @@
 
         width: $container-width;
         display: grid;
-        grid-template-columns: 78rem 1fr;
+        grid-template-columns: 65rem 1fr;
+        gap: 2.3rem;
+        grid-template-rows: 50rem;
     }
 }

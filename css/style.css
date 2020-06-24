@@ -33,11 +33,18 @@ html {
 
 body {
   font-family: "Rubik", sans-serif;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  font-weight: 400; }
 
 h1,
 h2 {
-  font-family: "Playfair Display", serif; }
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  color: #242423ff; }
+
+h5 {
+  font-weight: 300;
+  font-size: 1.5rem; }
 
 .logo {
   width: 17rem; }
@@ -63,7 +70,139 @@ h2 {
     color: #fff; }
 
 .main-post {
-  grid-column: 1 / 1; }
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  align-items: start;
+  height: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.4); }
+  .main-post__image {
+    grid-row: 1 / 6;
+    grid-column: 1 / 6;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; }
+    .main-post__image::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #cfdbd5ff;
+      height: 40%;
+      width: 100%;
+      display: block;
+      z-index: 4; }
+    .main-post__image--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2; }
+  .main-post__categories {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    z-index: 6;
+    align-self: center;
+    justify-self: start;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center; }
+  .main-post__category:not(:last-child) {
+    margin-right: 1.3rem; }
+  .main-post__detail {
+    grid-row: 4 / 6;
+    grid-column: 1 / -1;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .main-post__ac {
+    z-index: 6;
+    margin: 1rem 0; }
+  .main-post__title {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    text-align: center;
+    z-index: 6;
+    font-size: 2.1rem;
+    width: 70%;
+    margin-top: 1rem; }
+  .main-post__author {
+    text-transform: capitalize;
+    display: inline-block;
+    margin-right: 1rem; }
+    .main-post__author--icon {
+      color: #242423ff;
+      margin-right: .3rem; }
+  .main-post__comment {
+    display: inline-block; }
+    .main-post__comment--icon {
+      margin-right: .3rem; }
+
+.sub-post {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  align-items: start;
+  height: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.4); }
+  .sub-post--first {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1; }
+  .sub-post--second {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1; }
+  .sub-post__image {
+    grid-row: 1 / 6;
+    grid-column: 1 / 6;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; }
+    .sub-post__image::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #cfdbd5ff;
+      height: 40%;
+      width: 100%;
+      display: block;
+      z-index: 4; }
+    .sub-post__image--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2; }
+  .sub-post__detail {
+    grid-row: 4 / 6;
+    grid-column: 1 / -1;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 6; }
+  .sub-post__title {
+    font-size: 1.6rem;
+    width: 76%; }
+
+.category {
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  background-color: #333533ff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem; }
 
 .header {
   height: 16rem;
@@ -80,7 +219,7 @@ h2 {
 
 .hero-section {
   width: 100vw;
-  height: 55rem;
+  height: 65rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,4 +227,14 @@ h2 {
   .hero-section__container {
     width: 110rem;
     display: grid;
-    grid-template-columns: 78rem 1fr; }
+    grid-template-columns: 65rem 1fr;
+    gap: 2.3rem;
+    grid-template-rows: 50rem; }
+
+.sub-post-section {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  gap: 2.3rem; }
