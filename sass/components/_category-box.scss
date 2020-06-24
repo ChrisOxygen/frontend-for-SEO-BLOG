@@ -1,0 +1,30 @@
+.category-box {
+    height: 26rem;
+    width: 26rem;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $timberwolf;
+    outline: solid;
+    outline-width: .3rem;
+    outline-color: grey;
+    outline-offset: -1rem;
+    transition: all .4s;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-right: 4rem;
+
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &:hover {
+        outline-color: $jet;
+        outline-offset: 1rem;
+
+    }
+}

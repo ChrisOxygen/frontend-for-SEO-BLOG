@@ -204,6 +204,28 @@ h5 {
   text-transform: uppercase;
   font-size: 1rem; }
 
+.category-box {
+  height: 26rem;
+  width: 26rem;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cfdbd5ff;
+  outline: solid;
+  outline-width: .3rem;
+  outline-color: grey;
+  outline-offset: -1rem;
+  transition: all .4s;
+  cursor: pointer; }
+  .category-box:not(:last-child) {
+    margin-right: 4rem; }
+  .category-box__title {
+    text-align: center; }
+  .category-box:hover {
+    outline-color: #333533ff;
+    outline-offset: 1rem; }
+
 .header {
   height: 16rem;
   width: 100vw;
@@ -238,3 +260,50 @@ h5 {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: 1fr;
   gap: 2.3rem; }
+
+.categories-section {
+  width: 100vw;
+  height: 50rem;
+  display: grid;
+  grid-template-columns: 1fr 110rem 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; }
+  .categories-section__container {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .categories-section__title {
+    text-align: center;
+    position: relative;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .categories-section__title::after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 50%;
+      right: -5rem;
+      width: 3rem;
+      height: 3px;
+      background-color: black; }
+    .categories-section__title::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 50%;
+      left: -5rem;
+      width: 3rem;
+      height: 3px;
+      background-color: black; }
+  .categories-section__categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem; }
