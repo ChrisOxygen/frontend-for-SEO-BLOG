@@ -18,38 +18,7 @@
         justify-content: center;
     }
 
-    &__title {
-        text-align: center;
-        position: relative;
-        height: 5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-        &--text {}
-
-        &::after {
-            position: absolute;
-            content: "";
-            display: block;
-            top: 50%;
-            right: -5rem;
-            width: 3rem;
-            height: 3px;
-            background-color: black;
-        }
-
-        &::before {
-            position: absolute;
-            content: "";
-            display: block;
-            top: 50%;
-            left: -5rem;
-            width: 3rem;
-            height: 3px;
-            background-color: black;
-        }
-    }
 
     &__categories {
         display: flex;
