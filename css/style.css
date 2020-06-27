@@ -291,6 +291,12 @@ p {
     padding: 1rem 0; }
     .post__ac h5:not(:last-child) {
       margin-right: 1.5rem; }
+  .post__author--icon {
+    display: inline-block;
+    margin-right: .7rem; }
+  .post__comment--icon {
+    display: inline-block;
+    margin-right: .7rem; }
   .post__title {
     font-size: 1.9rem;
     margin-bottom: 1rem;
@@ -421,6 +427,51 @@ p {
     .social-icon__link:hover {
       color: #f5cb5cff; }
 
+.footer-menu {
+  width: 100%; }
+  .footer-menu__list {
+    list-style: none; }
+  .footer-menu__item {
+    display: inline-block;
+    padding-right: 2rem;
+    margin-right: 2rem; }
+    .footer-menu__item:not(:last-child) {
+      border-right: 2px solid #fff; }
+  .footer-menu__link {
+    text-decoration: none;
+    color: white; }
+
+.author-of-the-week {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 3.4rem; }
+  .author-of-the-week__image {
+    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 1.5rem; }
+    .author-of-the-week__image--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .author-of-the-week__desc {
+    margin-bottom: 1.5rem; }
+  .author-of-the-week__profile-link {
+    outline: none;
+    border: none;
+    padding: 1rem 2.2rem;
+    color: #fff;
+    background-color: #333533ff;
+    margin-bottom: 1.5rem;
+    transition: all .3s; }
+    .author-of-the-week__profile-link:hover {
+      transform: scale(1.1); }
+
 .header {
   height: 16rem;
   width: 100vw;
@@ -541,3 +592,53 @@ p {
   justify-content: flex-start;
   width: 100%;
   margin-bottom: 3.4rem; }
+
+.footer {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 110rem 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  background-color: #242423ff; }
+  .footer__container {
+    width: 110rem;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; }
+
+.footer-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 0; }
+  .footer-top__logo-and-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 45rem;
+    height: 100; }
+
+.footer-logo {
+  margin-bottom: 2rem; }
+
+.footer-bottom {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  .footer-bottom::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 80rem;
+    background-color: white;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%); }
