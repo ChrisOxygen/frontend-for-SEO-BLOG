@@ -426,6 +426,9 @@ p {
     transition: all .3s; }
     .social-icon__link:hover {
       color: #f5cb5cff; }
+  .social-icon--author {
+    align-items: center;
+    justify-content: flex-start; }
 
 .footer-menu {
   width: 100%; }
@@ -459,6 +462,8 @@ p {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+  .author-of-the-week__name {
+    margin-bottom: 1.5rem; }
   .author-of-the-week__desc {
     margin-bottom: 1.5rem; }
   .author-of-the-week__profile-link {
@@ -471,6 +476,40 @@ p {
     transition: all .3s; }
     .author-of-the-week__profile-link:hover {
       transform: scale(1.1); }
+
+.author-profile {
+  display: grid;
+  grid-template-columns: 1fr 45rem 1fr;
+  grid-template-rows: 1fr;
+  gap: 2rem; }
+  .author-profile__container {
+    grid-row: 1 / -1;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 3.4rem; }
+  .author-profile__name {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    align-self: center; }
+  .author-profile__image {
+    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 2rem; }
+    .author-profile__image--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .author-profile__desc {
+    margin-bottom: 2rem;
+    text-align: center; }
 
 .header {
   height: 16rem;
